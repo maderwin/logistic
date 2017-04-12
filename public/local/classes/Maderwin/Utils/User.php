@@ -2,11 +2,16 @@
 
 namespace Maderwin\Utils;
 
+use Maderwin\Traits\Cached;
+
 class User {
 
+    use Cached;
+
     public static function GetGroupByCode($code) {
+        if(static::isCached()) return static::getCache();
         $rsGroups = (new \CGroup)->GetList($by = "c_sort", $order = "asc", Array("STRING_ID" => $code));
-        return $rsGroups->Fetch();
+        return static::setCache($rsGroups->Fetch());
     }
 
 
@@ -31,6 +36,7 @@ class User {
     }
 
     public static function Exist($arFilter) {
+        if(static::isCached()) return static::getCache();
         \Bitrix\Main\Loader::includeModule('iblock');
 
         $rsUsers = (new \CUser)->GetList(
@@ -45,9 +51,10 @@ class User {
         );
 
         if ($rsUsers->Fetch()) {
-            return true;
-        } else
-            return false;
+            return static::setCache(true);
+        }
+
+        return static::setCache(false);
     }
 
     public static function IsAuthorized(){
@@ -55,15 +62,16 @@ class User {
     }
 
     public static function GetCurrent() {
-        $user = new \CUser();
-        return $user->GetByID($user->GetID())->Fetch();
+        return static::Get();
     }
 
     public static function Get($userId = false) {
+        if(static::isCached()) return static::getCache();
         if(!$userId){
-            return static::GetCurrent();
+            $userId = (new \CUser())->GetID();
         }
-        return (new \CUser())->GetByID($userId)->Fetch();
+        $arUser = (new \CUser())->GetByID($userId)->Fetch();
+        return static::setCache($arUser);
     }
 
     public static function AuthRedirect($url, $message = null){

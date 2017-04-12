@@ -5,11 +5,13 @@ namespace Logistic;
 use Bitrix\Highloadblock\HighloadBlockTable as HL;
 use Bitrix\Main\Entity\Query;
 use Bitrix\Main\Entity\DataManager;
+use Maderwin\Traits\Cached;
 
 \Bitrix\Main\Loader::includeModule('highloadblock');
 
 class Option
 {
+    use Cached;
 
     protected static $arRegistry = [];
     protected static $entity;
@@ -50,14 +52,16 @@ class Option
 
     public static function get($key, $default = false)
     {
+        if(static::isCached()) return static::getCache();
+
         if (isset(static::$arRegistry[$key])) {
             return static::$arRegistry[$key];
         }
 
         if ($arOption = static::getEntry($key)) {
-            return static::$arRegistry[$key] = ($arOption['ACTIVE']) ? $arOption['VALUE'] : false;
+            return static::setCache(static::$arRegistry[$key] = ($arOption['ACTIVE']) ? $arOption['VALUE'] : false);
         } else {
-            return $default;
+            return static::setCache($default);
         }
 
     }
@@ -81,5 +85,6 @@ class Option
                 ]
             );
         }
+        static::dropCache('get');
     }
 }

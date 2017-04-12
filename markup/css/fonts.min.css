@@ -1,0 +1,44 @@
+@font-face {
+    font-family: roboto;
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/RobotoRegular/RobotoRegular.eot?#iefix) format("embedded-opentype"), url(../fonts/RobotoRegular/RobotoRegular.woff) format("woff"), url(../fonts/RobotoRegular/RobotoRegular.ttf) format("truetype")
+}
+@font-face {
+    font-family: roboto;
+    font-style: normal;
+    font-weight: 700;
+    src: url(../fonts/RobotoBold/RobotoBold.eot?#iefix) format("embedded-opentype"), url(../fonts/RobotoBold/RobotoBold.woff) format("woff"), url(../fonts/RobotoBold/RobotoBold.ttf) format("truetype")
+}
+@font-face {
+    font-family: robotoslab;
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/RobotoSlabRegular/RobotoSlab-Regular.eot?#iefix) format("embedded-opentype"), url(../fonts/RobotoSlabRegular/RobotoSlab-Regular.woff) format("woff"), url(../fonts/RobotoSlabRegular/RobotoSlab-Regular.ttf) format("truetype")
+}
+@font-face {
+    font-family: robotoslab;
+    font-style: normal;
+    font-weight: 700;
+    src: url(../fonts/RobotoSlabBold/RobotoSlab-Bold.eot?#iefix) format("embedded-opentype"), url(../fonts/RobotoSlabBold/RobotoSlab-Bold.woff) format("woff"), url(../fonts/RobotoSlabBold/RobotoSlab-Bold.ttf) format("truetype")
+}
+@font-face {
+    font-family: robotoslab;
+    font-style: normal;
+    font-weight: Light;
+    src: url(../fonts/RobotoSlabLight/RobotoSlab-Light.eot?#iefix) format("embedded-opentype"), url(../fonts/RobotoSlabLight/RobotoSlab-Light.woff) format("woff"), url(../fonts/RobotoSlabLight/RobotoSlab-Light.ttf) format("truetype")
+}
+@font-face {
+    font-family: muller;
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/MullerRegular/MullerRegular.eot?#iefix) format("embedded-opentype"), url(../fonts/MullerRegular/MullerRegular.woff) format("woff"), 
+    url(../fonts/MullerRegular/MullerRegular.ttf) format("truetype")
+}
+@font-face {
+    font-family: muller;
+    font-style: normal;
+    font-weight: 700;
+    src: url(../fonts/MullerBold/MullerBold.eot?#iefix) format("embedded-opentype"), url(../fonts/MullerBold/MullerBold.woff) format("woff"), 
+    url(../fonts/MullerBold/MullerBold.ttf) format("truetype")
+}

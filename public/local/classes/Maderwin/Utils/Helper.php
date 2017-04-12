@@ -1,4 +1,5 @@
 <?php
+
 namespace Maderwin\Utils;
 
 /**
@@ -84,20 +85,20 @@ class Helper
             } else {
                 $height = ceil($height - ($height * abs($r - $w / $h)));
             }
-            $newwidth = $w;
-            $newheight = $h;
+            $newWidth = $w;
+            $newHeight = $h;
         } else {
             if ($w / $h > $r) {
-                $newwidth = $h * $r;
-                $newheight = $h;
+                $newWidth = $h * $r;
+                $newHeight = $h;
             } else {
-                $newheight = $w / $r;
-                $newwidth = $w;
+                $newHeight = $w / $r;
+                $newWidth = $w;
             }
         }
         $src = imagecreatefromjpeg($file);
-        $dst = imagecreatetruecolor($newwidth, $newheight);
-        imagecopyresampled($dst, $src, 0, 0, 0, 0, $newwidth, $newheight, $width, $height);
+        $dst = imagecreatetruecolor($newWidth, $newHeight);
+        imagecopyresampled($dst, $src, 0, 0, 0, 0, $newWidth, $newHeight, $width, $height);
 
         return $dst;
     }
@@ -178,7 +179,8 @@ class Helper
         return $template;
     }
 
-    public static function GetEnum($iblockId, $propertyName = false, $idKey = true, $xmlIdKey = false) {
+    public static function GetEnum($iblockId, $propertyName = false, $idKey = true, $xmlIdKey = false)
+    {
         \Bitrix\Main\Loader::includeModule('iblock');
 
         $arFilter = [];

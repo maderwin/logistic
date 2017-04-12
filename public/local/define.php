@@ -41,7 +41,18 @@ define( "P_LOG", P_APP_PATH . "logs/" );
 
 /* IB IDS */
 
-define('HL_OPTION', 3);
+define('HL_OPTION', 1);
+
+define('IB_CONTENT_THEME', 10);
+define('IB_CONTENT_SPECIAL', 9);
+define('IB_CONTENT_PRESS', 6);
+define('IB_CONTENT_NEWS', 5);
+define('IB_CONTENT_INTERVIEW', 4);
+define('IB_CONTENT_COMPANY', 3);
+define('IB_CONTENT_ARTICLE', 2);
+
+define('IB_DICT_SOURCES', 8);
+define('IB_DICT_REGION', 7);
 
 // Log
 define("LOG_FILENAME", P_LOG . "log" . date("Ymd_Hi") . ".log");
