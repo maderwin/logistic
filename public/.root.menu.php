@@ -1,0 +1,46 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Главная", 
+		"/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Новости", 
+		"/news/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Аналитика", 
+		"/analytics/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Мероприятия", 
+		"/events/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Каталог компаний", 
+		"/company/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Тренды", 
+		"/trends/", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>
