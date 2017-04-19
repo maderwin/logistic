@@ -61,7 +61,7 @@
             <div class="col-md-3 col-sm-2 col-xs-12">
                 <div class="logo_assg">
                     <span class="hidden-xs">Разработка сайта:</span>
-                    <a href="http://as-sg.ru/"><img src="<?=P_ASSETS?>img/assg_logo_white.png" alt=""></a>
+                    <a href="http://as-sg.ru/" target="_blank"><img src="<?=P_ASSETS?>img/assg_logo_white.png" alt=""></a>
                 </div>
             </div>
         </div>
