@@ -3,3 +3,5 @@
 /public/bitrix/
 /public/upload/
 /public/bitrixsetup.php
+/public/local/composer.phar
+
