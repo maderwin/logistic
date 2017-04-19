@@ -123,39 +123,23 @@
                             <img src="<?=P_ASSETS?>img/logo-mobile.png" alt="«Logistic.ru» - логистика, транспорт, таможня">
                         </a>
                     </div>
-                    <nav class="hidden-xs hidden-sm">
-                        <ul>
-                            <li class="active"><a href="index.html">Главное</a></li>
-                            <li><a href="news.html">Новости</a>
-                                <ul class="next_menu">
-                                    <li><a href="news.html">Транспорт</a></li>
-                                    <li><a href="news.html">Таможня и ФТС</a></li>
-                                    <li><a href="news.html">Складная логистика</a></li>
-                                    <li><a href="news.html">Экономика и Бизнес</a></li>
-                                    <li><a href="news.html">Технологии</a></li>
-                                    <li><a href="news.html">Логистика нефти и газа</a></li>
-                                    <li><a href="news.html">Хроника катастров</a></li>
-                                    <li><a href="news.html">Спецпроекты</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Аналитика</a>
-                                <ul class="next_menu">
-                                    <li><a href="stat.html">Статьи</a></li>
-                                    <li><a href="intervie.html">Интервью</a></li>
-                                    <li><a href="doc.html">Акты и документы</a></li>
-                                    <li><a href="presrelise.html">Пресс-релизы компании</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="meroprijatij.html">Мероприятия</a></li>
-                            <li><a href="stringcompany.html">Каталог Компании</a></li>
-                            <li><a href="#">Тренды</a></li>
-                        </ul>
-                    </nav>
-                    <div class="nav_mobile hidden-lg hidden-md">
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="85" height="55" viewBox="0 0 85 55">
-                            <image width="85" height="55" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFUAAAA3CAMAAABKF/Y5AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAP1BMVEUAAAD///////////////////////////////////////////////////////////////////////////8AAABDBdx4AAAAE3RSTlMAHpbf+/yXRfFEIfCY4fnzR0aVYWau9QAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAB9SURBVFjD7ZVZDoAgDAVfBVxYRO3976qGK7QfJG8OMCEN7QCQJUS1IoVV8LHtZsrBfgC5GEtVS0Y1l6pWNAdrw+lgPZ3e6jPX3M2lPQOX+X+9/zWQpSUzZWpjtwghUyGPYWNjeNhYNpaNZWMJIQOXO+Bys3zuKxvLxk7U2BfmsMjPLBWLqgAAAABJRU5ErkJggg=="/>
-                        </svg>
-                    </div>
+                    <?$APPLICATION->IncludeComponent(
+                        "bitrix:menu",
+                        "root",
+                        Array(
+                            "ROOT_MENU_TYPE" => "root",	// Тип меню для первого уровня
+                            "MENU_CACHE_TYPE" => "A",	// Тип кеширования
+                            "MENU_CACHE_TIME" => "3600",	// Время кеширования (сек.)
+                            "MENU_CACHE_USE_GROUPS" => "Y",	// Учитывать права доступа
+                            "MENU_CACHE_GET_VARS" => "",	// Значимые переменные запроса
+                            "MAX_LEVEL" => "2",	// Уровень вложенности меню
+                            "CHILD_MENU_TYPE" => "section",	// Тип меню для остальных уровней
+                            "USE_EXT" => "Y",	// Подключать файлы с именами вида .тип_меню.menu_ext.php
+                            "DELAY" => "N",	// Откладывать выполнение шаблона меню
+                            "ALLOW_MULTI_SELECT" => "N",	// Разрешить несколько активных пунктов одновременно
+                        ),
+                        false
+                    );?>
                 </div>
             </div>
         </div>
