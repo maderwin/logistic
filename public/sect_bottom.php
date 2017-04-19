@@ -15,7 +15,7 @@
                                 <div class="col-md-6">
                                     <a class="item_mini_1" href="morecontent.html">
                                         <div class="img_box">
-                                            <img src="img/tab1.jpg" alt="">
+                                            <img src="<?=P_ASSETS?>img/tab1.jpg" alt="">
                                         </div>
                                         <div class="title">Торговая сеть «Республика» автоматизировала логистику...</div>
                                         <div class="time">12:01</div>
@@ -24,7 +24,7 @@
                                 <div class="col-md-6">
                                     <a class="item_mini_1" href="morecontent.html">
                                         <div class="img_box">
-                                            <img src="img/tab2.jpg" alt="">
+                                            <img src="<?=P_ASSETS?>img/tab2.jpg" alt="">
                                         </div>
                                         <div class="title">Кабмин расширит <br> понятие  «опасное вождение»</div>
                                         <div class="time">12:18</div>
@@ -33,7 +33,7 @@
                                 <div class="col-md-6">
                                     <a class="item_mini_1" href="morecontent.html">
                                         <div class="img_box">
-                                            <img src="img/tab3.jpg" alt="">
+                                            <img src="<?=P_ASSETS?>img/tab3.jpg" alt="">
                                         </div>
                                         <div class="title">Кабмин расширит <br> понятие  «опасное вождение»</div>
                                         <div class="time">12:18</div>
@@ -42,7 +42,7 @@
                                 <div class="col-md-6">
                                     <a class="item_mini_1" href="morecontent.html">
                                         <div class="img_box">
-                                            <img src="img/tab4.jpg" alt="">
+                                            <img src="<?=P_ASSETS?>img/tab4.jpg" alt="">
                                         </div>
                                         <div class="title">Кабмин расширит <br> понятие <br>  «опасное вождение»</div>
                                         <div class="time">12:18</div>
@@ -56,7 +56,7 @@
                                 <div class="col-md-6">
                                     <a class="item_mini" href="morecontent.html">
                                         <div class="img_box">
-                                            <img src="img/tab1.jpg" alt="">
+                                            <img src="<?=P_ASSETS?>img/tab1.jpg" alt="">
                                         </div>
                                         <div class="title">Торговая сеть «Республика» автоматизировала логистику...</div>
                                         <div class="time">12:02</div>
@@ -65,7 +65,7 @@
                                 <div class="col-md-6">
                                     <a class="item_mini" href="morecontent.html">
                                         <div class="img_box">
-                                            <img src="img/tab2.jpg" alt="">
+                                            <img src="<?=P_ASSETS?>img/tab2.jpg" alt="">
                                         </div>
                                         <div class="title">Кабмин расширит <br> понятие  «опасное вождение»</div>
                                         <div class="time">12:18</div>
@@ -74,7 +74,7 @@
                                 <div class="col-md-6">
                                     <a class="item_mini" href="morecontent.html">
                                         <div class="img_box">
-                                            <img src="img/tab3.jpg" alt="">
+                                            <img src="<?=P_ASSETS?>img/tab3.jpg" alt="">
                                         </div>
                                         <div class="title">Кабмин расширит <br> понятие  «опасное вождение»</div>
                                         <div class="time">12:18</div>
@@ -83,7 +83,7 @@
                                 <div class="col-md-6">
                                     <a class="item_mini" href="morecontent.html">
                                         <div class="img_box">
-                                            <img src="img/tab4.jpg" alt="">
+                                            <img src="<?=P_ASSETS?>img/tab4.jpg" alt="">
                                         </div>
                                         <div class="title">Кабмин расширит <br> понятие <br>  «опасное вождение»</div>
                                         <div class="time">12:18</div>
@@ -97,7 +97,7 @@
                                 <div class="col-md-6">
                                     <a class="item_mini" href="morecontent.html">
                                         <div class="img_box">
-                                            <img src="img/tab1.jpg" alt="">
+                                            <img src="<?=P_ASSETS?>img/tab1.jpg" alt="">
                                         </div>
                                         <div class="title">Торговая сеть «Республика» автоматизировала логистику...</div>
                                         <div class="time">12:03</div>
@@ -106,7 +106,7 @@
                                 <div class="col-md-6">
                                     <a class="item_mini" href="morecontent.html">
                                         <div class="img_box">
-                                            <img src="img/tab2.jpg" alt="">
+                                            <img src="<?=P_ASSETS?>img/tab2.jpg" alt="">
                                         </div>
                                         <div class="title">Кабмин расширит <br> понятие  «опасное вождение»</div>
                                         <div class="time">12:18</div>
@@ -115,7 +115,7 @@
                                 <div class="col-md-6">
                                     <a class="item_mini" href="morecontent.html">
                                         <div class="img_box">
-                                            <img src="img/tab3.jpg" alt="">
+                                            <img src="<?=P_ASSETS?>img/tab3.jpg" alt="">
                                         </div>
                                         <div class="title">Кабмин расширит <br> понятие  «опасное вождение»</div>
                                         <div class="time">12:18</div>
@@ -124,7 +124,7 @@
                                 <div class="col-md-6">
                                     <a class="item_mini" href="morecontent.html">
                                         <div class="img_box">
-                                            <img src="img/tab4.jpg" alt="">
+                                            <img src="<?=P_ASSETS?>img/tab4.jpg" alt="">
                                         </div>
                                         <div class="title">Кабмин расширит <br> понятие <br>  «опасное вождение»</div>
                                         <div class="time">12:18</div>
@@ -137,7 +137,7 @@
                 </div>
             </div>
             <div class="col-md-4 hidden-xs hidden-sm">
-                <div class="reck reck_bott_2"><a href="#"><img src="img/rec_2.jpg" alt=""></a></div>
+                <div class="reck reck_bott_2"><a href="#"><img src="<?=P_ASSETS?>img/rec_2.jpg" alt=""></a></div>
             </div>
         </div>
     </div>
