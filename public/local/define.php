@@ -50,6 +50,7 @@ define('IB_CONTENT_NEWS', 5);
 define('IB_CONTENT_INTERVIEW', 4);
 define('IB_CONTENT_COMPANY', 3);
 define('IB_CONTENT_ARTICLE', 2);
+define('IB_CONTENT_EVENT', 11);
 
 define('IB_DICT_SOURCES', 8);
 define('IB_DICT_REGION', 7);
