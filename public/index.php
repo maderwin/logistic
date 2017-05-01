@@ -232,38 +232,13 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                         <div class="all"><a href="#">Все новости рубрики</a></div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="col_item hidden-xs hidden-sm">
-                        <div class="items">
-                            <div class="title">Мероприятия</div>
-                            <div class="item_right">
-                                <div class="title_r">Интернет+Транспорт</div>
-                                <div class="content_r">
-                                    Традиционная форма повышения квалификации, ознакомление с работами коллег, форма коллективнго, публичного рабочего обсуждения научной информации коллегами.
-                                </div>
-                                <div class="time_r">Дата:<span>21 октября 2016, 10:00</span></div>
-                                <div class="place_r">Место:<span>Москва, Антикафе&Коворкинг</span></div>
-                            </div>
-                            <div class="item_right">
-                                <div class="title_r">Интернет+Транспорт</div>
-                                <div class="content_r">
-                                    Традиционная форма повышения квалификации, ознакомление с работами коллег, форма коллективнго, публичного рабочего обсуждения научной информации коллегами.
-                                </div>
-                                <div class="time_r">Дата:<span>21 октября 2016, 10:00</span></div>
-                                <div class="place_r">Место:<span>Москва, Антикафе&Коворкинг</span></div>
-                            </div>
-                            <div class="item_right">
-                                <div class="title_r">Интернет+Транспорт</div>
-                                <div class="content_r">
-                                    Традиционная форма повышения квалификации, ознакомление с работами коллег, форма коллективнго, публичного рабочего обсуждения научной информации коллегами.
-                                </div>
-                                <div class="time_r">Дата:<span>21 октября 2016, 10:00</span></div>
-                                <div class="place_r">Место:<span>Москва, Антикафе&Коворкинг</span></div>
-                            </div>
-                            <div class="all"><a href="#">Все новости рубрики</a></div>
-                        </div>
-                    </div>
-                </div>
+                <?$APPLICATION->IncludeComponent(
+                    "logistic:widget.event.list",
+                    "",
+                    Array(
+
+                    )
+                );?>
 
                 <div class="col-md-8">
                     <div class="tabs_title">Выбор</div>
