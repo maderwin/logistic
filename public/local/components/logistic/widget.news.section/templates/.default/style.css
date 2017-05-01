@@ -1,0 +1,14 @@
+.items.event-list div.item_right {
+  cursor: default;
+}
+.items.event-list div.title_r a[href] {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+.items.event-list div.title_r a[href]:hover {
+  text-decoration: underline;
+}
+.items.event-list div.all a[href] {
+  cursor: pointer;
+}

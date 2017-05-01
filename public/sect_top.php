@@ -1,5 +1,5 @@
 <?$APPLICATION->IncludeComponent(
-    "logistic:news.hero",
+    "logistic:top.widget.news",
     "",
     Array(
 
