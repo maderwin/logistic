@@ -5,54 +5,20 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
     <section class="box_information">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 col-sm-6">
-                    <div class="col_item">
-                        <a class="items" href="morecontent.html">
-                            <div class="title">Транспорт и логистика</div>
-                            <div class="img_box"><img src="<?=P_ASSETS?>img/items.jpg" alt=""></div>
-                            <div class="content_title">РЖД» предложили проиндексировать тарифы на грузоперевозки на 6,8%</div>
-                            <div class="time">12:13</div>
-                            <div class="content">
-                                Москва. 23 сентября. Logistic.Ru — ОАО «РЖД» предложило в 2017 году проиндексировать тарифы на грузовые перевозки всех видов грузов на 6,8%. Соответствующий документ за подписью вице-президента ОАО «РЖД» Салмана Бабаева был направлен в аппарат
-                            </div>
-                        </a>
-                        <a class="item">
-                            <div class="img_box"><img src="<?=P_ASSETS?>img/item.png" alt=""></div>
-                            <div class="content_title">«РЖД» предложили в 2017 г. проиндексирофвать тарифы на грузоперевозки на 6,8%</div>
-                            <div class="time">12:13</div>
-                        </a>
-                        <a class="item">
-                            <div class="img_box"><img src="<?=P_ASSETS?>img/item2.png" alt=""></div>
-                            <div class="content_title">«РЖД» предложили в 2017 г. проиндексирофвать тарифы на грузоперевозки на 6,8%</div>
-                            <div class="time">12:13</div>
-                        </a>
-                        <div class="all"><a href="#">Все новости рубрики</a></div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="col_item">
-                        <a class="items" href="morecontent.html">
-                            <div class="title">таможня и вэд</div>
-                            <div class="img_box"><img src="<?=P_ASSETS?>img/items2.jpg" alt=""></div>
-                            <div class="content_title">Коллегия ЮТУ рассмотрела вопросы деятельности таможенных органов... </div>
-                            <div class="time">12:13</div>
-                            <div class="content">
-                                Москва. 23 сентября. Logistic.Ru — 22 сентября 2016 года в г. Таганроге состоялось выездное заседание коллегии Южного таможенного управления, в котором приняли участие заместитель руководителя ФТС России Андрей Струков.
-                            </div>
-                        </a>
-                        <a class="item" href="morecontent.html">
-                            <div class="img_box"><img src="<?=P_ASSETS?>img/item_2.png" alt=""></div>
-                            <div class="content_title">Совместное заседание коллегий Северо-Западного таможенного управления в Мурманске</div>
-                            <div class="time">12:13</div>
-                        </a>
-                        <a class="item" href="morecontent.html">
-                            <div class="img_box"><img src="<?=P_ASSETS?>img/item_2_2.png" alt=""></div>
-                            <div class="content_title">Совместное заседание коллегий Северо-Западного таможенного управления в Мурманске</div>
-                            <div class="time">12:13</div>
-                        </a>
-                        <div class="all"><a href="#">Все новости рубрики</a></div>
-                    </div>
-                </div>
+                <?$APPLICATION->IncludeComponent(
+                    "logistic:widget.news.section",
+                    "",
+                    Array(
+                        'SECTION_CODE' => 'transport'
+                    )
+                );?>
+                <?$APPLICATION->IncludeComponent(
+                    "logistic:widget.news.section",
+                    "",
+                    Array(
+                        'SECTION_CODE' => 'customs'
+                    )
+                );?>
                 <div class="col-md-4 col-sm-6">
                     <div class="col_item hidden-xs hidden-sm">
                         <div class="items">
@@ -120,54 +86,20 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                     <div class="reck hidden-xs hidden-sm"><a href="#"><img src="<?=P_ASSETS?>img/rec.jpg" alt=""></a></div>
                 </div>
 
-                <div class="col-md-4 col-sm-6">
-                    <div class="col_item">
-                        <a class="items" href="morecontent.html">
-                            <div class="title">Экономика и бизнес</div>
-                            <div class="img_box"><img src="<?=P_ASSETS?>img/items3.jpg" alt=""></div>
-                            <div class="content_title">Индекс стоимости фрахта Baltic Dry 22 сентября составил 937 пунктов</div>
-                            <div class="time">12:13</div>
-                            <div class="content">
-                                Москва. 23 сентября. Logistic.Ru — Baltic Dry 22 сентября 2016 года составил 937 пунктов. Как следует из расчетных данных, индекс вырос на 34 пункта (+3,77%) в сравнении с предыдущей отчетной датой (21 сентября).
-                            </div>
-                        </a>
-                        <a class="item" href="morecontent.html">
-                            <div class="img_box"><img src="<?=P_ASSETS?>img/item_3.png" alt=""></div>
-                            <div class="content_title">Нефть умеренно дешевеет на фоне фиксации инвесторами прибыли</div>
-                            <div class="time">12:13</div>
-                        </a>
-                        <a class="item" href="morecontent.html">
-                            <div class="img_box"><img src="<?=P_ASSETS?>img/item_3_2.png" alt=""></div>
-                            <div class="content_title">Грузооборот терминала «ЮГ-2» (Усть-Луга) к 2020 году увеличится до 6,5 млн тонн</div>
-                            <div class="time">12:13</div>
-                        </a>
-                        <div class="all"><a href="#">Все новости рубрики</a></div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="col_item">
-                        <a class="items" href="morecontent.html">
-                            <div class="title">Логистика нефти и газа</div>
-                            <div class="img_box"><img src="<?=P_ASSETS?>img/items2.jpg" alt=""></div>
-                            <div class="content_title">Нефть умеренно дешевеет на фоне фиксации инвесторами прибыли</div>
-                            <div class="time">12:13</div>
-                            <div class="content">
-                                Москва. 23 сентября. Logistic.Ru — 22 сентября 2016 года в г. Таганроге состоялось выездное заседание коллегии Южного таможенного управления, в котором приняли участие заместитель руководителя ФТС России Андрей Струков.
-                            </div>
-                        </a>
-                        <a class="item" href="morecontent.html">
-                            <div class="img_box"><img src="<?=P_ASSETS?>img/item_2.png" alt=""></div>
-                            <div class="content_title">Цены на бензин в РФ с 12 по 18 сентября снова почти не изменились</div>
-                            <div class="time">12:13</div>
-                        </a>
-                        <a class="item" href="morecontent.html">
-                            <div class="img_box"><img src="<?=P_ASSETS?>img/item_2_2.png" alt=""></div>
-                            <div class="content_title">Ирак готов поддержать заморозку уровня добычи <br> нефти</div>
-                            <div class="time">12:13</div>
-                        </a>
-                        <div class="all"><a href="#">Все новости рубрики</a></div>
-                    </div>
-                </div>
+                <?$APPLICATION->IncludeComponent(
+                    "logistic:widget.news.section",
+                    "",
+                    Array(
+                        'SECTION_CODE' => 'business'
+                    )
+                );?>
+                <?$APPLICATION->IncludeComponent(
+                    "logistic:widget.news.section",
+                    "",
+                    Array(
+                        'SECTION_CODE' => 'petroleum'
+                    )
+                );?>
                 <div class="col-md-4 col-sm-12">
                     <div class="col_item">
                         <div class="items">
@@ -184,54 +116,21 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                     </div>
                 </div>
 
-                <div class="col-md-4 col-sm-6">
-                    <div class="col_item">
-                        <a class="items" href="morecontent.html">
-                            <div class="title">Экономика и бизнес</div>
-                            <div class="img_box"><img src="<?=P_ASSETS?>img/items3.jpg" alt=""></div>
-                            <div class="content_title">Индекс стоимости фрахта Baltic Dry 22 сентября составил 937 пунктов</div>
-                            <div class="time">12:13</div>
-                            <div class="content">
-                                Москва. 23 сентября. Logistic.Ru — Baltic Dry 22 сентября 2016 года составил 937 пунктов. Как следует из расчетных данных, индекс вырос на 34 пункта (+3,77%) в сравнении с предыдущей отчетной датой (21 сентября).
-                            </div>
-                        </a>
-                        <a class="item" href="morecontent.html">
-                            <div class="img_box"><img src="<?=P_ASSETS?>img/item_3.png" alt=""></div>
-                            <div class="content_title">Нефть умеренно дешевеет на фоне фиксации инвесторами прибыли</div>
-                            <div class="time">12:13</div>
-                        </a>
-                        <a class="item" href="morecontent.html">
-                            <div class="img_box"><img src="<?=P_ASSETS?>img/item_3_2.png" alt=""></div>
-                            <div class="content_title">Грузооборот терминала «ЮГ-2» (Усть-Луга) к 2020 году увеличится до 6,5 млн тонн</div>
-                            <div class="time">12:13</div>
-                        </a>
-                        <div class="all"><a href="#">Все новости рубрики</a></div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="col_item">
-                        <a class="items" href="morecontent.html">
-                            <div class="title">Логистика нефти и газа</div>
-                            <div class="img_box"><img src="<?=P_ASSETS?>img/items2.jpg" alt=""></div>
-                            <div class="content_title">Нефть умеренно дешевеет на фоне фиксации инвесторами прибыли</div>
-                            <div class="time">12:13</div>
-                            <div class="content">
-                                Москва. 23 сентября. Logistic.Ru — 22 сентября 2016 года в г. Таганроге состоялось выездное заседание коллегии Южного таможенного управления, в котором приняли участие заместитель руководителя ФТС России Андрей Струков.
-                            </div>
-                        </a>
-                        <a class="item" href="morecontent.html">
-                            <div class="img_box"><img src="<?=P_ASSETS?>img/item_2.png" alt=""></div>
-                            <div class="content_title">Цены на бензин в РФ с 12 по 18 сентября снова почти не изменились</div>
-                            <div class="time">12:13</div>
-                        </a>
-                        <a class="item" href="morecontent.html">
-                            <div class="img_box"><img src="<?=P_ASSETS?>img/item_2_2.png" alt=""></div>
-                            <div class="content_title">Ирак готов поддержать заморозку уровня <br> добычи нефти</div>
-                            <div class="time">12:13</div>
-                        </a>
-                        <div class="all"><a href="#">Все новости рубрики</a></div>
-                    </div>
-                </div>
+                <?$APPLICATION->IncludeComponent(
+                    "logistic:widget.news.section",
+                    "",
+                    Array(
+                        'SECTION_CODE' => 'storage'
+                    )
+                );?>
+                <?$APPLICATION->IncludeComponent(
+                    "logistic:widget.news.section",
+                    "",
+                    Array(
+                        'SECTION_CODE' => 'technology'
+                    )
+                );?>
+
                 <?$APPLICATION->IncludeComponent(
                     "logistic:widget.event.list",
                     "",

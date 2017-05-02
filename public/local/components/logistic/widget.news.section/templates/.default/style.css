@@ -1,14 +1,39 @@
-.items.event-list div.item_right {
-  cursor: default;
+body .loader {
+  display: none;
 }
-.items.event-list div.title_r a[href] {
-  color: inherit;
+section.box_information .col_item .title {
+  position: relative;
+  display: block;
+  padding: 5px 15px 3px;
+  font-family: Muller, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  background-color: #101013;
+  text-transform: uppercase;
+  color: #fff;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+section.box_information .col_item .title:before {
+  position: absolute;
+  display: block;
+  content: '';
+  top: 0;
+  right: 0;
+  width: 5px;
+  height: 5px;
+  background-color: #fff;
+  border: 5px solid #e2e2e2;
+  border-bottom: 5px solid #1487bf;
+  border-left: 5px solid #1487bf;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+section.box_information .col_item .title:hover {
+  background-color: #1487bf;
   text-decoration: none;
-  cursor: pointer;
 }
-.items.event-list div.title_r a[href]:hover {
-  text-decoration: underline;
-}
-.items.event-list div.all a[href] {
-  cursor: pointer;
+section.box_information .col_item .title:hover:before {
+  border-bottom: 5px solid #101013;
+  border-left: 5px solid #101013;
 }

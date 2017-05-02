@@ -1,18 +1,18 @@
-<div class="col-md-4">
-    <div class="col_item hidden-xs hidden-sm">
-        <div class="items event-list">
-            <div class="title">Мероприятия</div>
-            <? foreach ($arResult['EVENT_LIST'] as $arEvent): ?>
-                <div class="item_right">
-                    <div class="title_r"><a href="<?=$arEvent['DETAIL_PAGE_URL']?>"><?=$arEvent['NAME']?></a></div>
-                    <div class="content_r"><?=$arEvent['PREVIEW_TEXT']?></div>
-                    <div class="time_r">Дата:<span><?=$arEvent['DATE_ACTIVE_FROM']?></span></div>
-                    <div class="place_r">Место:<span><?=$arEvent['PROPERTY_PLACE_VALUE']?></span></div>
-                </div>
-            <? endforeach; ?>
-            <? if(sizeof($arResult['EVENT_LIST'])): ?>
-                <div class="all"><a href="<?=reset($arResult['EVENT_LIST'])['LIST_PAGE_URL']?>">Все новости рубрики</a></div>
-            <? endif ?>
+<? if($arResult['SECTION']): ?>
+    <div class="col-md-4 col-sm-6">
+        <div class="col_item">
+            <a class="title" href="<?=$arResult['SECTION']['SECTION_PAGE_URL']?>"><?=$arResult['SECTION']['NAME']?></a>
+            <? $i = 0; foreach($arResult['NEWS_LIST'] as $arNews): ?>
+                <a class="<?=(!$i)?'items':'item'?>" href="<?=$arNews['DETAIL_PAGE_URL']?>">
+                    <div class="img_box"><img src="<?=$arNews['PREVIEW_PICTURE']['src']?>" alt=""></div>
+                    <div class="content_title"><?=$arNews['NAME']?></div>
+                    <div class="time"><?=\DateTime::createFromFormat('d.m.Y H:i:s', $arNews['DATE_ACTIVE_FROM'])->format('H:i')?></div>
+                    <? if(!$i): ?>
+                        <div class="content"><?=$arNews['PREVIEW_TEXT']?></div>
+                    <? endif ?>
+                </a>
+            <? $i++; endforeach; ?>
+            <div class="all"><a href="<?=$arResult['SECTION']['SECTION_PAGE_URL']?>">Все новости рубрики</a></div>
         </div>
     </div>
-</div>
+<? endif; ?>
