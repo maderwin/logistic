@@ -44,13 +44,15 @@ define( "P_LOG", P_APP_PATH . "logs/" );
 define('HL_OPTION', 1);
 
 define('IB_CONTENT_SPECIAL', 9);
+
 define('IB_CONTENT_NEWS', 5);
 define('IB_CONTENT_COMPANY', 3);
-
 define('IB_CONTENT_EVENT', 11);
+
 define('IB_CONTENT_INTERVIEW', 4);
 define('IB_CONTENT_PRESS', 6);
 define('IB_CONTENT_ARTICLE', 2);
+define('IB_CONTENT_DOCS', 12);
 
 define('IB_DICT_SOURCES', 8);
 define('IB_DICT_REGION', 7);

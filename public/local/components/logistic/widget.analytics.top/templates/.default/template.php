@@ -3,11 +3,11 @@
         <div class="tabs_title">Выбор</div>
         <div class="infotabs_2" id="infotabs_2">
             <ul>
-                <?if(sizeof($arResult['ARTICLE_LIST'])):?><li>Статьи</li><?endif?>
-                <?if(sizeof($arResult['INTERVIEW_LIST'])):?><li>Интервью</li><?endif?>
-                <?if(sizeof($arResult['PRESS_LIST'])):?><li>Пресс-релизы</li><?endif?>
+                <?if(sizeof($arResult['ARTICLE_LIST'])):?><li title="1">Статьи</li><?endif?>
+                <?if(sizeof($arResult['INTERVIEW_LIST'])):?><li title="2">Интервью</li><?endif?>
+                <?if(sizeof($arResult['PRESS_LIST'])):?><li title="3">Пресс-релизы</li><?endif?>
             </ul>
-            <div class="content">
+            <div class="content content_b">
                 <?if(sizeof($arResult['ARTICLE_LIST'])):?>
                     <div class="info_2">
                         <div class="row">
@@ -18,23 +18,23 @@
                                     $date = \DateTime::createFromFormat('d.m.Y', $arArticle['DATE_ACTIVE_FROM']);
                                 }
                                 ?>
-                                    <div class="col-md-6">
-                                        <a class="item_mini_1" href="<?=$arArticle['DETAIL_PAGE_URL']?>">
-                                            <div class="img_box">
-                                                <img src="<?=$arArticle['PREVIEW_PICTURE']['src']?>" alt="">
-                                            </div>
-                                            <div class="title"><?=$arArticle['NAME']?></div>
-                                            <div class="time"><?=$date?$date->format('H:i'):''?></div>
-                                        </a>
-                                    </div>
+                                <div class="col-md-6">
+                                    <a class="item_mini_1" href="<?=$arArticle['DETAIL_PAGE_URL']?>">
+                                        <div class="img_box">
+                                            <img src="<?=$arArticle['PREVIEW_PICTURE']['src']?>" alt="">
+                                        </div>
+                                        <div class="title"><?=$arArticle['NAME']?></div>
+                                        <div class="time"><?=$date?$date->format('H:i'):''?></div>
+                                    </a>
+                                </div>
                             <?endforeach;?>
-<!--                            <div class="col-md-12">-->
-<!--                                <div class="all"><a href="#">Все новости рубрики</a></div>-->
-<!--                            </div>-->
+                            <div class="col-md-12">
+                                <div class="all"><a href="#">Все новости рубрики</a></div>
+                            </div>
                         </div>
                     </div>
                 <?endif?>
-                <?if(sizeof($arResult['READER_INTERVIEW_LIST'])):?>
+                <?if(sizeof($arResult['INTERVIEW_LIST'])):?>
                     <div class="info_2">
                         <div class="row">
                             <?foreach ($arResult['INTERVIEW_LIST'] as $arInterview):?>
@@ -44,19 +44,19 @@
                                     $date = \DateTime::createFromFormat('d.m.Y', $arInterview['DATE_ACTIVE_FROM']);
                                 }
                                 ?>
-                                    <div class="col-md-6">
-                                        <a class="item_mini" href="<?=$arInterview['DETAIL_PAGE_URL']?>">
-                                            <div class="img_box">
-                                                <img src="<?=$arInterview['PREVIEW_PICTURE']['src']?>" alt="">
-                                            </div>
-                                            <div class="title"><?=$arInterview['NAME']?></div>
-                                            <div class="time"><?=$date?$date->format('H:i'):''?></div>
-                                        </a>
-                                    </div>
-                                <?endforeach;?>
-                            <!--                            <div class="col-md-12">-->
-                            <!--                                <div class="all"><a href="#">Все новости рубрики</a></div>-->
-                            <!--                            </div>-->
+                                <div class="col-md-6">
+                                    <a class="item_mini" href="<?=$arInterview['DETAIL_PAGE_URL']?>">
+                                        <div class="img_box">
+                                            <img src="<?=$arInterview['PREVIEW_PICTURE']['src']?>" alt="">
+                                        </div>
+                                        <div class="title"><?=$arInterview['NAME']?></div>
+                                        <div class="time"><?=$date?$date->format('H:i'):''?></div>
+                                    </a>
+                                </div>
+                            <?endforeach;?>
+                            <div class="col-md-12">
+                                <div class="all"><a href="#">Все новости рубрики</a></div>
+                            </div>
                         </div>
                     </div>
                 <?endif?>
@@ -80,9 +80,9 @@
                                     </a>
                                 </div>
                             <?endforeach;?>
-                            <!--                            <div class="col-md-12">-->
-                            <!--                                <div class="all"><a href="#">Все новости рубрики</a></div>-->
-                            <!--                            </div>-->
+                            <div class="col-md-12">
+                                <div class="all"><a href="#">Все новости рубрики</a></div>
+                            </div>
                         </div>
                     </div>
                 <?endif?>

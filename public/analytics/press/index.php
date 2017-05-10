@@ -67,7 +67,7 @@ $APPLICATION->SetTitle("Пресс-релизы компаний");
     "DISPLAY_TOP_PAGER" => "N",	// Выводить над списком
     "FILE_404" => "",	// Страница для показа (по умолчанию /404.php)
     "HIDE_LINK_WHEN_NO_DETAIL" => "N",	// Скрывать ссылку, если нет детального описания
-    "IBLOCK_ID" => constant("IB_CONTENT_ARTICLE"),	// Инфоблок
+    "IBLOCK_ID" => constant("IB_CONTENT_PRESS"),	// Инфоблок
     "IBLOCK_TYPE" => "content",	// Тип инфоблока
     "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",	// Включать инфоблок в цепочку навигации
     "LIST_ACTIVE_DATE_FORMAT" => "d.m.Y",	// Формат показа даты
