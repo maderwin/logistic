@@ -1,5 +1,7 @@
 /.idea
 /public/local/vendor/
 /public/bitrix/
+/public/upload/resize_cache/
+/public/upload/tmp/
 /public/bitrixsetup.php
 /public/local/composer.phar
