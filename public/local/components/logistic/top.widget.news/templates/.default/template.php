@@ -32,9 +32,7 @@ $this->setFrameMode(true);
                         >
                             <div class="inf">
                                 <?if($arNews['SECTION']):?>
-                                    <div class="theme">
-                                        <a href="<?=$arNews['SECTION']['SECTION_PAGE_URL']?>"><?=$arNews['SECTION']['NAME']?></a>
-                                    </div>
+                                    <div class="theme"><?=$arNews['SECTION']['NAME']?></div>
                                 <?endif?>
                                 <div class="title"><?=$arNews['NAME']?></div>
                                 <div class="content"><?=$arNews['PREVIEW_TEXT']?></div>
