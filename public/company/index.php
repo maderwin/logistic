@@ -3,7 +3,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Каталог компаний");
 ?><?$APPLICATION->IncludeComponent(
 	"bitrix:news", 
-	"company",
+	"company", 
 	array(
 		"ADD_ELEMENT_CHAIN" => "Y",
 		"ADD_SECTIONS_CHAIN" => "Y",
@@ -64,11 +64,11 @@ $APPLICATION->SetTitle("Каталог компаний");
 			6 => "PHONE",
 			7 => "SERVICES",
 			8 => "WORKHOURS",
-			9 => "SOURCE",
-			10 => "THEME",
-			11 => "PRICE",
-			12 => "PLACE",
-			13 => "COORDINATES",
+			9 => "",
+			10 => "",
+			11 => "",
+			12 => "",
+			13 => "",
 			14 => "",
 		),
 		"DETAIL_SET_CANONICAL_URL" => "Y",
@@ -97,9 +97,9 @@ $APPLICATION->SetTitle("Каталог компаний");
 			9 => "",
 		),
 		"LIST_PROPERTY_CODE" => array(
-			0 => "",
-			1 => "PLACE",
-			2 => "THEME",
+			0 => "SERVICES",
+			1 => "",
+			2 => "",
 			3 => "",
 		),
 		"MESSAGE_404" => "",
@@ -135,7 +135,7 @@ $APPLICATION->SetTitle("Каталог компаний");
 		"USE_SEARCH" => "Y",
 		"USE_SHARE" => "N",
 		"YANDEX" => "N",
-		"COMPONENT_TEMPLATE" => "event",
+		"COMPONENT_TEMPLATE" => "company",
 		"SEF_URL_TEMPLATES" => array(
 			"news" => "",
 			"section" => "#SECTION_CODE#/",

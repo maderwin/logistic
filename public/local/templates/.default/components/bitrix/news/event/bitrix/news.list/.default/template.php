@@ -73,12 +73,15 @@ $this->setFrameMode(true);
         ?>
         <?
             $date = \DateTime::createFromFormat('d.m.Y H:i:s', $arItem['DATE_ACTIVE_FROM']);
+            if(!$date) {
+                $date = \DateTime::createFromFormat('d.m.Y', $arItem['DATE_ACTIVE_FROM']);
+            }
         ?>
         <div class="item" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
             <div class="row">
                 <div class="col-md-4 col-sm-4">
                     <img src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>" alt="">
-                    <div class="time"><?=$date->format('H:i')?> <span><?=$date->format('d.m.Y')?></span></div>
+                    <div class="time"><?=$date?$date->format('H:i'):''?> <span><?=$date?$date->format('d.m.Y'):''?></span></div>
                 </div>
                 <div class="col-md-8 col-sm-8">
                     <div class="title_cont"><a href="<?=$arItem["DETAIL_PAGE_URL"]?>"><?=$arItem["NAME"]?></a></div>

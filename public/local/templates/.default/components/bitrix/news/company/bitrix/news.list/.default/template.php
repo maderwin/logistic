@@ -14,7 +14,7 @@ $this->setFrameMode(true);
 ?>
 <div class="spec_proj">
     <div class="bto"></div>
-    <div class="title">Мероприятия</div>
+    <div class="title">Каталог компаний</div>
     <div class="header hidden-xs hidden-sm">
         <div class="s_bottom_name">
             <div class="row">
@@ -73,6 +73,9 @@ $this->setFrameMode(true);
         ?>
         <?
             $date = \DateTime::createFromFormat('d.m.Y H:i:s', $arItem['DATE_ACTIVE_FROM']);
+            if(!$date) {
+                $date = \DateTime::createFromFormat('d.m.Y', $arItem['DATE_ACTIVE_FROM']);
+            }
         ?>
         <div class="item" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
             <div class="row">

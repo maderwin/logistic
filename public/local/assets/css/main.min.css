@@ -4914,6 +4914,11 @@ section.box_information .socku span {
     font-weight: 700;
     font-size: 14px
 }
+section.box_information .socku .ya-share2 {
+    display: inline-block;
+    vertical-align: middle;
+}
+/*
 section.box_information .socku ul {
     display: inline-block;
     list-style-type: none;
@@ -4982,6 +4987,7 @@ section.box_information .socku ul li:nth-child(4) a {
 section.box_information .socku ul li:nth-child(5) a {
     background-position: -96px -70px
 }
+*/
 section.box_information .other_box .title {
     position: relative;
     display: block;

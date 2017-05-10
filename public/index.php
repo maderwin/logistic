@@ -1,7 +1,8 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
+$APPLICATION->SetTitle("Главная");
 ?>
+
     <section class="box_information">
         <div class="container">
             <div class="row">
@@ -85,6 +86,8 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                     </div>
                     <div class="reck hidden-xs hidden-sm"><a href="#"><img src="<?=P_ASSETS?>img/rec.jpg" alt=""></a></div>
                 </div>
+            </div>
+            <div class="row">
 
                 <?$APPLICATION->IncludeComponent(
                     "logistic:widget.news.section",
@@ -115,6 +118,8 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="row">
 
                 <?$APPLICATION->IncludeComponent(
                     "logistic:widget.news.section",
@@ -138,124 +143,16 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
 
                     )
                 );?>
+            </div>
+            <div class="row">
 
-                <div class="col-md-8">
-                    <div class="tabs_title">Выбор</div>
-                    <div class="infotabs_1" id="infotabs_1">
-                        <ul>
-                            <li>Редакции</li>
-                            <li>Читателей</li>
-                        </ul>
-                        <div class="content">
-                            <div class="info_1">
-                                <div class="row">
-                                    <a class="item_big" href="morecontent.html">
-                                        <div class="col-md-5"><img src="<?=P_ASSETS?>img/Tab_big.jpg" alt=""></div>
-                                        <div class="col-md-7">
-                                            <div class="title">Стартовал новый проект «Стандарты качества фармацевтической логистики»</div>
-                                            <div class="time">12:13</div>
-                                            <div class="content">
-                                                <p>На сегодняшний день фармацевтический рынок логистики активно нуждается в стандартизации» именно так считает один из ведущих экспертов компании Олег Дорожинский. Он уверен, что пока на нем отсутствует единая система контроля качества постоянный хаос и несоответствие будет постоянно.</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <a class="item_mini" href="morecontent.html">
-                                            <div class="img_box">
-                                                <img src="<?=P_ASSETS?>img/tab1.jpg" alt="">
-                                            </div>
-                                            <div class="title">Торговая сеть «Республика» автоматизировала логистику с системой управления LEAD WMS</div>
-                                            <div class="time">12:18</div>
-                                        </a>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <a class="item_mini" href="morecontent.html">
-                                            <div class="img_box">
-                                                <img src="<?=P_ASSETS?>img/tab2.jpg" alt="">
-                                            </div>
-                                            <div class="title">Кабмин расширит <br> понятие  «опасное вождение»</div>
-                                            <div class="time">12:18</div>
-                                        </a>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <a class="item_mini" href="morecontent.html">
-                                            <div class="img_box">
-                                                <img src="<?=P_ASSETS?>img/tab3.jpg" alt="">
-                                            </div>
-                                            <div class="title">Кабмин расширит <br> понятие  «опасное вождение»</div>
-                                            <div class="time">12:18</div>
-                                        </a>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <a class="item_mini" href="morecontent.html">
-                                            <div class="img_box">
-                                                <img src="<?=P_ASSETS?>img/tab4.jpg" alt="">
-                                            </div>
-                                            <div class="title">Кабмин расширит <br> понятие <br>  «опасное вождение»</div>
-                                            <div class="time">12:18</div>
-                                        </a>
-                                    </div>
-                                    <div class="col-md-12"><div class="all"><a href="#">Все новости рубрики</a></div> </div>
-                                </div>
-                            </div>
-                            <div class="info_1">
-                                <div class="row">
-                                    <a class="item_big" href="morecontent.html">
-                                        <div class="col-md-5"><img src="<?=P_ASSETS?>img/Tab_big.jpg" alt=""></div>
-                                        <div class="col-md-7">
-                                            <div class="title">Стартовал новый проект «Стандарты качества фармацевтической логистики»</div>
-                                            <div class="time">12:13</div>
-                                            <div class="content">
-                                                <p>На сегодняшний день фармацевтический рынок логистики активно нуждается в стандартизации» именно так считает один из ведущих экспертов компании Олег Дорожинский. Он уверен, что пока на нем отсутствует единая система контроля качества постоянный хаос и несоответствие будет постоянно.</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <a class="item_mini" href="morecontent.html">
-                                            <div class="img_box">
-                                                <img src="<?=P_ASSETS?>img/tab1.jpg" alt="">
-                                            </div>
-                                            <div class="title">Торговая сеть «Республика» автоматизировала логистику с системой управления LEAD WMS</div>
-                                            <div class="time">12:18</div>
-                                        </a>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <a class="item_mini" href="morecontent.html">
-                                            <div class="img_box">
-                                                <img src="<?=P_ASSETS?>img/tab2.jpg" alt="">
-                                            </div>
-                                            <div class="title">Кабмин расширит <br> понятие  «опасное вождение»</div>
-                                            <div class="time">12:18</div>
-                                        </a>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <a class="item_mini" href="morecontent.html">
-                                            <div class="img_box">
-                                                <img src="<?=P_ASSETS?>img/tab3.jpg" alt="">
-                                            </div>
-                                            <div class="title">Кабмин расширит <br> понятие  «опасное вождение»</div>
-                                            <div class="time">12:18</div>
-                                        </a>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <a class="item_mini" href="morecontent.html">
-                                            <div class="img_box">
-                                                <img src="<?=P_ASSETS?>img/tab4.jpg" alt="">
-                                            </div>
-                                            <div class="title">Кабмин расширит <br> понятие <br>  «опасное вождение»</div>
-                                            <div class="time">12:18</div>
-                                        </a>
-                                    </div>
-                                    <div class="col-md-12"><div class="all"><a href="#">Все новости рубрики</a></div> </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?$APPLICATION->IncludeComponent(
+                    "logistic:widget.news.favorite",
+                    "",
+                    Array(
+
+                    )
+                );?>
                 <div class="col-md-4">
                     <div class="col_item_2">
                         <div class="items">
