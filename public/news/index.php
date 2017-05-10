@@ -128,7 +128,7 @@ $APPLICATION->SetTitle("Новости");
 		"SEF_URL_TEMPLATES" => array(
 			"news" => "",
 			"section" => "#SECTION_CODE#/",
-			"detail" => "#ELEMENT_ID#-#ELEMENT_CODE#/",
+			"detail" => "#ELEMENT_ID#/",
 			"search" => "search/",
 			"rss" => "rss/",
 			"rss_section" => "#SECTION_CODE#/rss/",

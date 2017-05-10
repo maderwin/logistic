@@ -28,6 +28,9 @@ $this->setFrameMode(true);
 ?>
 <?
 $date = \DateTime::createFromFormat('d.m.Y H:i:s', $arResult['DATE_ACTIVE_FROM']);
+if(!$date) {
+    $date = \DateTime::createFromFormat('d.m.Y', $arResult['DATE_ACTIVE_FROM']);
+}
 ?>
 <div class="more_block">
     <div class="title"><?=$arResult["NAME"]?></div>
@@ -54,114 +57,26 @@ $date = \DateTime::createFromFormat('d.m.Y H:i:s', $arResult['DATE_ACTIVE_FROM']
     </div>
 </div>
 
+<?if($arResult['DISPLAY_PROPERTIES']['SERVICES'] && sizeof($arResult['DISPLAY_PROPERTIES']['SERVICES']['DISPLAY_VALUE'])):?>
 <div class="uslugi">
     <div class="title">Услуги компании</div>
     <div class="box_uslug">
         <div class="row">
-            <div class="col-md-4">
-                <div class="item">Железнодорожные перевозки;</div>
-            </div>
-            <div class="col-md-4">
-                <div class="item">Автоперевозки грузов;</div>
-            </div>
-            <div class="col-md-4">
-                <div class="item">Доставка контейнеров;</div>
-            </div>
-            <div class="col-md-4">
-                <div class="item">Международные жд перевозки;</div>
-            </div>
-            <div class="col-md-4">
-                <div class="item">Перевозка в крытых вагонах;</div>
-            </div>
-            <div class="col-md-4">
-                <div class="item">Перевозка в крытых вагонах;</div>
-            </div>
-            <div class="col-md-4">
-                <div class="item">Международные жд перевозки;</div>
-            </div>
-            <div class="col-md-4">
-                <div class="item">Перевозка в крытых вагонах;</div>
-            </div>
-            <div class="col-md-4">
-                <div class="item">Перевозка в крытых вагонах;</div>
-            </div>
+            <?foreach($arResult['DISPLAY_PROPERTIES']['SERVICES']['DISPLAY_VALUE'] as $service):?>
+                <div class="col-md-4">
+                    <div class="item"><?=$service?>;</div>
+                </div>
+            <?endforeach;?>
         </div>
     </div>
 </div>
-
-<div class="socku">
-    <span>Поделиться: </span>
-    <ul>
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
-    </ul>
-</div>
-<div class="other_box">
-    <div class="title">Другие статьи по теме</div>
-    <div class="row">
-        <div class="col-md-3 col-sm-6 col-xs-12">
-            <a href="#" class="item">
-                <img src="<?=P_ASSETS?>img/other1.jpg" alt="">
-                <div class="time"><span>12:00</span>19.10.16</div>
-                <div class="title_item">На южном направлени складывается дефицит...</div>
-            </a>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12">
-            <a href="#" class="item">
-                <img src="<?=P_ASSETS?>img/other1.jpg" alt="">
-                <div class="time"><span>12:00</span>19.10.16</div>
-                <div class="title_item">На южном направлени складывается дефицит...</div>
-            </a>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12">
-            <a href="#" class="item">
-                <img src="<?=P_ASSETS?>img/other1.jpg" alt="">
-                <div class="time"><span>12:00</span>19.10.16</div>
-                <div class="title_item">На южном направлени складывается дефицит...</div>
-            </a>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12">
-            <a href="#" class="item">
-                <img src="<?=P_ASSETS?>img/other1.jpg" alt="">
-                <div class="time"><span>12:00</span>19.10.16</div>
-                <div class="title_item">На южном направлени складывается дефицит...</div>
-            </a>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12">
-            <a href="#" class="item">
-                <img src="<?=P_ASSETS?>img/other1.jpg" alt="">
-                <div class="time"><span>12:00</span>19.10.16</div>
-                <div class="title_item">На южном направлени складывается дефицит...</div>
-            </a>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12">
-            <a href="#" class="item">
-                <img src="<?=P_ASSETS?>img/other1.jpg" alt="">
-                <div class="time"><span>12:00</span>19.10.16</div>
-                <div class="title_item">На южном направлени складывается дефицит...</div>
-            </a>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12">
-            <a href="#" class="item">
-                <img src="<?=P_ASSETS?>img/other1.jpg" alt="">
-                <div class="time"><span>12:00</span>19.10.16</div>
-                <div class="title_item">На южном направлени складывается дефицит...</div>
-            </a>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12">
-            <a href="#" class="item">
-                <img src="<?=P_ASSETS?>img/other1.jpg" alt="">
-                <div class="time"><span>12:00</span>19.10.16</div>
-                <div class="title_item">На южном направлени складывается дефицит...</div>
-            </a>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <div class="all"><a href="#">Все статьи по теме</a></div>
-        </div>
-    </div>
-</div>
+<?endif?>
+<?$APPLICATION->IncludeComponent(
+    "bitrix:main.include",
+    "",
+    Array(
+        "AREA_FILE_SHOW" => "file",
+        "PATH" => "/local/include/share.php",
+        "EDIT_TEMPLATE" => ""
+    )
+);?>
