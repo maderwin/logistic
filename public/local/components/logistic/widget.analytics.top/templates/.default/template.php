@@ -3,9 +3,9 @@
         <div class="tabs_title">Выбор</div>
         <div class="infotabs_2" id="infotabs_2">
             <ul>
-                <?if(sizeof($arResult['ARTICLE_LIST'])):?><li title="1">Статьи</li><?endif?>
-                <?if(sizeof($arResult['INTERVIEW_LIST'])):?><li title="2">Интервью</li><?endif?>
-                <?if(sizeof($arResult['PRESS_LIST'])):?><li title="3">Пресс-релизы</li><?endif?>
+                <?if(sizeof($arResult['ARTICLE_LIST'])):?><li>Статьи</li><?endif?>
+                <?if(sizeof($arResult['INTERVIEW_LIST'])):?><li>Интервью</li><?endif?>
+                <?if(sizeof($arResult['PRESS_LIST'])):?><li>Пресс-релизы</li><?endif?>
             </ul>
             <div class="content content_b">
                 <?if(sizeof($arResult['ARTICLE_LIST'])):?>
